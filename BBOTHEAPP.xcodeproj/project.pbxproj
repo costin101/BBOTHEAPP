@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD89A0A02BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89A09F2BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift */; };
 		DDC18A662BB2B8C400AE6727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC18A652BB2B8C400AE6727 /* ContentView.swift */; };
 		DDC18A682BB2B8C600AE6727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC18A672BB2B8C600AE6727 /* Assets.xcassets */; };
 		DDC18A6B2BB2B8C600AE6727 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC18A6A2BB2B8C600AE6727 /* Preview Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD89A09F2BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBOTHEAPPApp.swift; sourceTree = "<group>"; };
 		DDC18A602BB2B8C400AE6727 /* BBOTHEAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBOTHEAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC18A652BB2B8C400AE6727 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DDC18A672BB2B8C600AE6727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD89A09E2BB4A89100B5FD39 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DD89A09F2BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		DDC18A572BB2B8C400AE6727 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		DDC18A622BB2B8C400AE6727 /* BBOTHEAPP */ = {
 			isa = PBXGroup;
 			children = (
+				DD89A09E2BB4A89100B5FD39 /* App */,
 				DDC18A652BB2B8C400AE6727 /* ContentView.swift */,
 				DDC18A672BB2B8C600AE6727 /* Assets.xcassets */,
 				DDC18A692BB2B8C600AE6727 /* Preview Content */,
@@ -255,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDC18A662BB2B8C400AE6727 /* ContentView.swift in Sources */,
+				DD89A0A02BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
