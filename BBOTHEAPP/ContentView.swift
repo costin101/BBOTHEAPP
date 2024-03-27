@@ -1,24 +1,50 @@
-//
-//  ContentView.swift
-//  BBOTHEAPP
-//
-//  Created by Costin Vieru on 26.03.2024.
-//
-
 import SwiftUI
+import WebKit
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+struct WebViewWrapper: UIViewRepresentable {
+    let urlString: String
+    let webView: WKWebView = WKWebView()
+
+    func makeUIView(context: Context) -> WKWebView {
+        webView.navigationDelegate = context.coordinator
+        return webView
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        if let url = URL(string: urlString) {
+            let request = URLRequest(url: url)
+            uiView.load(request)
         }
-        .padding()
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+
+    class Coordinator: NSObject, WKNavigationDelegate {
+        var parent: WebViewWrapper
+
+        init(_ parent: WebViewWrapper) {
+            self.parent = parent
+        }
+
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            // Enable swipe gestures for backward and forward navigation
+            webView.allowsBackForwardNavigationGestures = true
+        }
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            WebViewWrapper(urlString: "https://app.bbotheapp.com")
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
