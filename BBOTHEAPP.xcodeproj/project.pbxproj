@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DD89A0A02BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89A09F2BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift */; };
+		DD89A0A32BB4A92B00B5FD39 /* WebViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89A0A22BB4A92B00B5FD39 /* WebViewWrapper.swift */; };
+		DD89A0A72BB6C0FB00B5FD39 /* NetworkUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89A0A62BB6C0FB00B5FD39 /* NetworkUnavailableView.swift */; };
+		DD89A0A92BB6C1BB00B5FD39 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89A0A82BB6C1BB00B5FD39 /* NetworkMonitor.swift */; };
 		DDC18A662BB2B8C400AE6727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC18A652BB2B8C400AE6727 /* ContentView.swift */; };
 		DDC18A682BB2B8C600AE6727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC18A672BB2B8C600AE6727 /* Assets.xcassets */; };
 		DDC18A6B2BB2B8C600AE6727 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC18A6A2BB2B8C600AE6727 /* Preview Assets.xcassets */; };
@@ -35,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		DD89A09F2BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBOTHEAPPApp.swift; sourceTree = "<group>"; };
+		DD89A0A22BB4A92B00B5FD39 /* WebViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWrapper.swift; sourceTree = "<group>"; };
+		DD89A0A62BB6C0FB00B5FD39 /* NetworkUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUnavailableView.swift; sourceTree = "<group>"; };
+		DD89A0A82BB6C1BB00B5FD39 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		DDC18A602BB2B8C400AE6727 /* BBOTHEAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBOTHEAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC18A652BB2B8C400AE6727 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DDC18A672BB2B8C600AE6727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +85,16 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		DD89A0A12BB4A90500B5FD39 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DD89A0A22BB4A92B00B5FD39 /* WebViewWrapper.swift */,
+				DD89A0A62BB6C0FB00B5FD39 /* NetworkUnavailableView.swift */,
+				DD89A0A82BB6C1BB00B5FD39 /* NetworkMonitor.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		DDC18A572BB2B8C400AE6727 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				DD89A09E2BB4A89100B5FD39 /* App */,
+				DD89A0A12BB4A90500B5FD39 /* Components */,
 				DDC18A652BB2B8C400AE6727 /* ContentView.swift */,
 				DDC18A672BB2B8C600AE6727 /* Assets.xcassets */,
 				DDC18A692BB2B8C600AE6727 /* Preview Content */,
@@ -265,8 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD89A0A72BB6C0FB00B5FD39 /* NetworkUnavailableView.swift in Sources */,
 				DDC18A662BB2B8C400AE6727 /* ContentView.swift in Sources */,
+				DD89A0A92BB6C1BB00B5FD39 /* NetworkMonitor.swift in Sources */,
 				DD89A0A02BB4A8AE00B5FD39 /* BBOTHEAPPApp.swift in Sources */,
+				DD89A0A32BB4A92B00B5FD39 /* WebViewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +455,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos or videos to upload on your account";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use microphone for live streaming";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -472,6 +494,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos or videos to upload on your account";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use microphone for live streaming";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

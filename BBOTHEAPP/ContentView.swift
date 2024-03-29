@@ -1,45 +1,22 @@
 import SwiftUI
 import WebKit
 
-struct WebViewWrapper: UIViewRepresentable {
-    let urlString: String
-    let webView: WKWebView = WKWebView()
-
-    func makeUIView(context: Context) -> WKWebView {
-        webView.navigationDelegate = context.coordinator
-        return webView
-    }
-    
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        if let url = URL(string: urlString) {
-            let request = URLRequest(url: url)
-            uiView.load(request)
-        }
-    }
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-
-    class Coordinator: NSObject, WKNavigationDelegate {
-        var parent: WebViewWrapper
-
-        init(_ parent: WebViewWrapper) {
-            self.parent = parent
-        }
-
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            // Enable swipe gestures for backward and forward navigation
-            webView.allowsBackForwardNavigationGestures = true
-        }
-    }
-}
-
 struct ContentView: View {
+    @State private var networkMonitor = NetworkMonitor()
+    
     var body: some View {
-        NavigationView {
-            WebViewWrapper(urlString: "https://app.bbotheapp.com")
+        if networkMonitor.isConnected {
+            NavigationStack {
+                WebViewWrapper(urlString: "https://app.bbotheapp.com")
+            }
+        } else {
+            ContentUnavailableView(
+                "No Internet Connection",
+                systemImage: "wifi.exclamationmark",
+                description: Text("Please check your connection and try again.")
+            )
         }
+        
     }
 }
 

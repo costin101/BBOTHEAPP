@@ -3,4 +3,52 @@
    uuid = "51EEE763-2871-4F9F-B327-E75EA87E325F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC993D50-7459-4DEE-83CD-C6DABAF490FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BBOTHEAPP/Components/WebViewWrapper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "updateUIView(_:context:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AC993D50-7459-4DEE-83CD-C6DABAF490FD - 715c0884379cc6ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BBOTHEAPP.WebViewWrapper.updateUIView(_: __C.WKWebView, context: SwiftUI.UIViewRepresentableContext&lt;BBOTHEAPP.WebViewWrapper&gt;) -&gt; ()"
+                  moduleName = "BBOTHEAPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/costinv/Documents/Projects/BBOTHEAPP/BBOTHEAPP/Components/WebViewWrapper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+               <Location
+                  uuid = "AC993D50-7459-4DEE-83CD-C6DABAF490FD - 715c0884379cc6ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BBOTHEAPP.WebViewWrapper.updateUIView(_: __C.WKWebView, context: SwiftUI.UIViewRepresentableContext&lt;BBOTHEAPP.WebViewWrapper&gt;) -&gt; ()"
+                  moduleName = "BBOTHEAPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/costinv/Documents/Projects/BBOTHEAPP/BBOTHEAPP/Components/WebViewWrapper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
